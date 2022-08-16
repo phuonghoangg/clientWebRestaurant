@@ -10,7 +10,7 @@ function ProductLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header>
-                <div>Header them</div>
+                <div>Header bla</div>
             </Header>
             <div className={cx('content')}>{children}</div>
             <Aside />
