@@ -1,0 +1,140 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29vh;
+    width: 100vw;
+    background-color: var(--blue-hover);
+}
+.inline {
+    padding: 15px;
+    width: 60vw;
+    height: 75%;
+}
+@mixin icon {
+    background-color: transparent;
+    color: white;
+    font-size: 2.5rem;
+}
+.title {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 0.5px solid #333333;
+    align-items: center;
+    span {
+        font-size: 1.6rem;
+        padding: 10px;
+        font-weight: 600;
+        color: white;
+    }
+    .icon-facebook {
+        @include icon();
+        padding: 0 24px;
+    }
+    .icon-insta {
+        @include icon();
+        padding: 0 8px 0 24px;
+    }
+}
+
+.content {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    height: 50%;
+    img {
+        padding: 24px 24px 24px 0px;
+        border-right: 1px solid #333333;
+        cursor: pointer;
+    }
+}
+.contact {
+    padding: 24px 0px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-title {
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.contact-number {
+    width: 200px;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.menu {
+    margin-left: 170px;
+
+    display: flex;
+    width: 40%;
+    height: 100%;
+}
+
+.master-card {
+    display: flex;
+    justify-content: flex-end;
+    width: 20vh;
+    img {
+        width: 85%;
+        height: 85%;
+    }
+}
+
+.menu-item {
+    font-size: 1.3rem;
+    color: #bcc1cb;
+    font-weight: 700;
+    padding: 8px;
+    &:hover {
+        color: var(--color-text);
+        cursor: pointer;
+    }
+}
+
+.setting {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.coppy-right {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--blue-button);
+}
+.switch-language {
+    padding: 8px 24px;
+    background-color: #0078ae;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .inline {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .logo {
+        width: 12%;
+    }
+}

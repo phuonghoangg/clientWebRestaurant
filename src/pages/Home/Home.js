@@ -10,6 +10,7 @@ function Home() {
         <div className={cx('wrapper')}>
             <NavSlick />
             <Content />
+            <div className={cx('bla')}>asdasd</div>
         </div>
     );
 }
