@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './Voucher.scss';
+import styles from './Voucher.module.scss';
 
 const cx = classNames.bind(styles);
 

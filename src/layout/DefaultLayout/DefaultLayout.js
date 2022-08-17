@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './DefaultLayout.scss';
+import styles from './DefaultLayout.module.scss';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 const cx = classNames.bind(styles);
@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
-            <Header />
+            <Header className={cx('header')} />
             <div className={cx('content')}>{children}</div>
             <Footer />
         </div>

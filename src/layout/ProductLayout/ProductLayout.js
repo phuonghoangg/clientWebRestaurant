@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './ProductLayout.scss';
+import styles from './ProductLayout.module.scss';
 import Aside from './Aside';
 import Header from '../components/Header';
 import Footer from '../components/Footer';

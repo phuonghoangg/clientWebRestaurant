@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './Tracking.scss';
+import styles from './Tracking.module.scss';
 
 const cx = classNames.bind(styles);
 

@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header {
+    z-index: 1000;
+}
+.content {
+    margin-top: var(--header-height);
+}

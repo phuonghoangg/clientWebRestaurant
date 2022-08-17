@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary: #17a2b8;
+    --blue: #17a2b8;
+    --primary: #004666;
+    --blue-hover: #00628f;
+    --header-height: 72px;
+    --color-text: #6c757d;
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -20,4 +26,9 @@ body {
     line-height: 1.25;
     color: #212529;
     text-rendering: optimizeSpeed;
+}
+
+button {
+    outline: none;
+    border: none;
 }

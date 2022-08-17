@@ -1,0 +1,109 @@
+.wrapper {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+}
+.inner {
+    height: 100%;
+    width: 98%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 15%;
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.tab {
+    display: flex;
+    height: 100%;
+}
+.tab-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        background-color: var(--blue-hover);
+        color: rgba(255, 255, 255, 0.75);
+        cursor: pointer;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    img {
+        padding-right: 5px;
+        width: 34px;
+        height: 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+@mixin icon-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 3rem;
+    color: #fff;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--blue-hover);
+    }
+}
+.icon {
+    @include icon-right();
+}
+.icon-shop {
+    @include icon-right();
+    position: relative;
+    .number {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        z-index: 10;
+        background-color: #aa1934;
+        border-radius: 4px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 10px;
+        top: 15px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .inner {
+        display: none;
+    }
+}
