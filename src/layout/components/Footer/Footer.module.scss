@@ -2,14 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 29vh;
+    height: 30vh;
     width: 100vw;
     background-color: var(--blue-hover);
 }
 .inline {
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     width: 60vw;
-    height: 75%;
 }
 @mixin icon {
     background-color: transparent;
@@ -24,7 +23,7 @@
     span {
         font-size: 1.6rem;
         padding: 10px;
-        font-weight: 600;
+        font-weight: 700;
         color: white;
     }
     .icon-facebook {
@@ -54,7 +53,7 @@
     }
 }
 .contact {
-    padding: 24px 0px 24px 24px;
+    padding: 24px 0px 24px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,7 +68,7 @@
 }
 
 .contact-number {
-    width: 200px;
+    width: 250px;
     text-align: center;
     font-size: 4rem;
     font-weight: 700;
