@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: var(--footer-height);
     width: 100vw;
     background-color: var(--blue-hover);
 }

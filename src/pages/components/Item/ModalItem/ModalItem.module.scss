@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    height: 90vh;
+    height: 900px;
     margin: -10px;
 }
 .left {
@@ -54,6 +54,7 @@
     margin: 0 0 24px;
     margin-right: 30px;
     font-weight: 600;
+    text-transform: capitalize;
 }
 .description {
     color: #858891;

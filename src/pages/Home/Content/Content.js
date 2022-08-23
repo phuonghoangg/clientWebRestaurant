@@ -8,8 +8,12 @@ import { useState } from 'react';
 const cx = classNames.bind(styles);
 
 function Content() {
+    const [value, setValue] = useState('');
     const [style1, setStyle1] = useState(true);
     const [style2, setStyle2] = useState(false);
+    const handleDelete = () => {
+        setValue('');
+    };
     const handleClick = () => {
         setStyle1(!style1);
         setStyle2(false);
@@ -17,6 +21,14 @@ function Content() {
     const handleClick2 = () => {
         setStyle2(!style2);
         setStyle1(false);
+    };
+    const handleChange = (e) => {
+        let bla = e.target.value;
+        if (!bla.startsWith(' ')) {
+            setValue(e.target.value);
+        } else {
+            return;
+        }
     };
     return (
         <div className={cx('wrapper')}>
@@ -31,10 +43,16 @@ function Content() {
                 </div>
                 <div className={cx('tab-active')}>
                     <div className={cx('search-content')}>
-                        <input placeholder="Vui lòng nhập địa chỉ nhận hàng" />
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faX} />
-                        </button>
+                        <input
+                            value={value}
+                            onChange={(e) => handleChange(e)}
+                            placeholder="Vui lòng nhập địa chỉ nhận hàng"
+                        />
+                        {value && (
+                            <button className={cx('clear')} onClick={handleDelete}>
+                                <FontAwesomeIcon icon={faX} />
+                            </button>
+                        )}
                         <button className={cx('search-btn')}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>

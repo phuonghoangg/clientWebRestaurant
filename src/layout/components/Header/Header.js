@@ -7,8 +7,8 @@ import styles from './Header.module.scss';
 const cx = classNames.bind(styles);
 
 const listTab = [
-    { id: 1, content: 'Mã E-Voucher', to: '/promotion' },
-    { id: 2, content: 'Khuyến Mãi', to: '/voucher' },
+    { id: 1, content: 'Mã E-Voucher', to: '/voucher' },
+    { id: 2, content: 'Khuyến Mãi', to: '/promotion' },
     { id: 3, content: 'Thực Đơn', to: '/product' },
     { id: 4, content: 'Theo dõi đơn hàng', to: '/tracking' },
 ];

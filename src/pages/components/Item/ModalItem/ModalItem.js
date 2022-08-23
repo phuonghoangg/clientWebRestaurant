@@ -49,10 +49,14 @@ function ModalItem({ data, handleClose }) {
         handleClose();
     };
     useEffect(() => {
+        // lay cac option de luu vao`  gui vao <Total /> day len api
+        // console.log(deBanh[checkedDeBanh - 1].title);
+        // if (checkedCoBanh) {
+        //     console.log(coBanh[checkedCoBanh - 1].title);
+        // }
         let kq = countCB + countThem + countVien;
         setCount(kq);
     }, [countCB, countThem, countVien, countVo]);
-
     return (
         <div className={cx('wrapper')}>
             <div className={cx('left')}>

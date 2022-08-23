@@ -1,0 +1,26 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 90px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+
+    &.active {
+        color: var(--color-red);
+        border-bottom: 2px solid var(--color-red);
+        &:hover {
+            color: var(--color-red);
+        }
+    }
+    &:hover {
+        color: var(--text-black);
+    }
+}
