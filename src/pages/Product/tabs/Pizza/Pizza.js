@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
-import ListProduct from '../components/ListProduct';
-import Title from '../components/Title';
+import ListProduct from '~/pages/components/ListProduct';
 import MenuBtn from './MenuBtn';
 import styles from './Pizza.module.scss';
 

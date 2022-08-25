@@ -16,6 +16,9 @@ const dataImg = [
     { id: 5, linkImg: 'https://img.dominos.vn/Mua-1-tang-1-PC.jpg' },
 ];
 function NavSlick() {
+    const handleClick = (e) => {
+        console.log(e);
+    };
     var settings = {
         className: 'center',
         centerMode: true,
@@ -64,7 +67,7 @@ function NavSlick() {
             <Slider {...settings}>
                 {dataImg.map((item) => {
                     return (
-                        <div key={item.id} className={cx('card')}>
+                        <div key={item.id} className={cx('card')} onClick={() => handleClick(item.id)}>
                             <img src={item.linkImg} alt="error" />
                         </div>
                     );

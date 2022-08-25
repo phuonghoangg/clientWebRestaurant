@@ -1,8 +1,11 @@
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import { faShoppingBasket, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
+import ModalBody from './ModalBody';
 
 const cx = classNames.bind(styles);
 
@@ -14,6 +17,14 @@ const listTab = [
 ];
 
 function Header({ className }) {
+    const [show, setShow] = useState(false);
+    const handleClick = () => {
+        setShow(true);
+    };
+    const handleClose = () => {
+        setShow(false);
+    };
+
     const classes = cx('wrapper', {
         [className]: className,
     });
@@ -36,16 +47,21 @@ function Header({ className }) {
                     <img src="https://dominos.vn/img/icon/flag-vn.png" alt="flag-vn" />
                     <img src="https://dominos.vn/img/icon/flag-en.png" alt="flag-en" />
 
-                    <button className={cx('icon')}>
+                    <button className={cx('icon')} onClick={handleClick}>
                         <FontAwesomeIcon icon={faUser} />
                     </button>
 
-                    <button className={cx('icon-shop')}>
+                    <Link to="/cart" className={cx('icon-shop')}>
                         <FontAwesomeIcon icon={faShoppingBasket} />
                         <span className={cx('number')}>1</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
+            <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal.Body>
+                    <ModalBody handleClose={handleClose} />
+                </Modal.Body>
+            </Modal>
         </div>
     );
 }

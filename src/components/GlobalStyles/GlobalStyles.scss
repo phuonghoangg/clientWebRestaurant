@@ -8,12 +8,13 @@
     --blue-hover: #00628f;
     --blue-button: #0ca3ea;
     --header-height: 80px;
-    --footer-height: 300px;
+    --footer-height: 280px;
     --color-text: #6c757d;
     --yellow: #ffc107;
     --bg-white: #f2f4f8;
     --color-black: #25282d;
     --color-red: #e31837;
+    --red-hover: #c0142f;
     --border-grey: #dee2e6;
     --grey-hover: #ececec;
 }
@@ -30,7 +31,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.25;
     color: #252129;
     text-rendering: optimizeSpeed;

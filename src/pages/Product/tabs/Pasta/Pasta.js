@@ -1,8 +1,7 @@
 import classNames from 'classnames/bind';
-import ListProduct from '../components/ListProduct';
+import ListProduct from '~/pages/components/ListProduct';
 import styles from './Pasta.module.scss';
-import Title from '../components/Title/Title';
-
+import Title from '~/pages/components/Title';
 const cx = classNames.bind(styles);
 
 const dataProduct = {

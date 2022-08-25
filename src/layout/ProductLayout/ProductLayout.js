@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import classNames from 'classnames/bind';
 import styles from './ProductLayout.module.scss';
 import Aside from './Aside';

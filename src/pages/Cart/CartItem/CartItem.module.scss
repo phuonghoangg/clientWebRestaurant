@@ -1,0 +1,139 @@
+.wrapper {
+    margin-bottom: 16px;
+}
+.inline {
+    padding: 8px 0;
+    display: flex;
+    height: inherit;
+    border-bottom: 1px solid #ced4da;
+}
+.left {
+    display: flex;
+    width: 540px;
+}
+.image {
+    width: 233px;
+    height: 100%;
+    padding-right: 15px;
+    img {
+        width: 203px;
+        height: 135px;
+        border-radius: 10px;
+    }
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+}
+.option-item {
+    flex: 1;
+    p {
+        height: 40px;
+        margin: 0 0 16px;
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+}
+.choose-item {
+    font-size: 1.4rem;
+    color: #717273;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.option-handle {
+    button {
+        font-size: 1.3rem;
+        color: #0078ae;
+        background-color: transparent;
+        font-weight: 600;
+        margin-right: 15px;
+        &:hover {
+            color: var(--blue-hover);
+        }
+    }
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right-top {
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+.total {
+    span {
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+}
+@mixin btn-setting {
+    padding: 12px 16px;
+    line-height: 1.25;
+    border: 1px solid transparent;
+    user-select: none;
+}
+.total-right {
+    display: flex;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    margin-right: 15px;
+    .btn-active {
+        background-color: #dfe4ea;
+        @include btn-setting();
+        &:focus {
+            color: #212529;
+            background-color: #c8d1db;
+            border-color: #c0cad6;
+            box-shadow: 0 0 0 0.2rem rgb(195 199 205 / 50%);
+        }
+        &:hover {
+            color: #212529;
+            background-color: #c8d1db;
+            border-color: #c0cad6;
+        }
+    }
+    .btn-disable {
+        @include btn-setting();
+        pointer-events: none;
+        background-color: #f2f4f8;
+        opacity: 0.5;
+    }
+}
+.count-order {
+    z-index: 3;
+    display: flex;
+    width: 52px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 12px 0px;
+    padding-left: 20px;
+    background-color: #f2f4f8;
+    border: 0.5px solid #d9dee4;
+    opacity: 0.5;
+    &:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+    }
+}
+.count-order + button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.btn-active {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

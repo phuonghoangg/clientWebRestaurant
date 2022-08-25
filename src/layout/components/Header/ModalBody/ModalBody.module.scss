@@ -1,0 +1,73 @@
+.wrapper {
+    margin: -10px;
+    height: 380px;
+}
+.wrapper-2 {
+    margin: -10px;
+    min-height: 618px;
+    max-height: inherit;
+    .right-modal {
+        min-height: 618px;
+    }
+    .image {
+        width: 333px;
+        height: 617px;
+    }
+}
+.inline {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.image {
+    height: 355px;
+    width: 333px;
+    background-image: url('https://dominos.vn/img/bg/modal-signin-signup.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.right-modal {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    .close {
+        width: 40px;
+        height: 40px;
+        border-top-right-radius: 5px;
+        position: absolute;
+        right: 0;
+        background-color: var(--color-red);
+        color: white;
+        font-weight: 600;
+    }
+}
+.inline-right {
+    height: 100%;
+    padding: 16px 48px;
+}
+.body-content {
+    height: 100%;
+    padding-top: 5px;
+}
+.nav-content {
+    margin-bottom: 48px;
+}
+@mixin nav-item {
+    padding: 8px 0;
+    margin: 0 16px -1px;
+    font-weight: 700;
+    background: transparent;
+    font-size: 1.6rem;
+}
+.nav-item-active {
+    @include nav-item();
+    color: var(--color-red);
+    border-bottom: 3px solid var(--color-red);
+}
+.nav-item-normal {
+    @include nav-item();
+    color: #bcc1cb;
+}

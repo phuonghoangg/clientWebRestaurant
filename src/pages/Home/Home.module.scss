@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: inherit;
+    min-height: calc(100vh - calc(var(--footer-height) + var(--header-height)));
+    max-height: inherit;
     width: 100vw;
 }
 .wrapper-slick {

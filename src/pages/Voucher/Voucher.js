@@ -1,8 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Voucher.module.scss';
 
-import { faX, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const cx = classNames.bind(styles);
 
 function Voucher() {

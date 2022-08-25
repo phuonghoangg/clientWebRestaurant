@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 import classNames from 'classnames/bind';
 import styles from './DefaultLayout.module.scss';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
+// import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 
 const cx = classNames.bind(styles);
 
@@ -23,7 +23,7 @@ function DefaultLayout({ children }) {
         //         <ClimbingBoxLoader color={'#F37A24'} loading={loading} size={30} />
         //     ) : (
         <div className={cx('wrapper')}>
-            <Header className={cx('header')} />
+            <Header />
             <div className={cx('content')}>{children}</div>
             <Footer />
         </div>
