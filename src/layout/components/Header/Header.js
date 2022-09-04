@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Modal from 'react-bootstrap/Modal';
+import ModalBody from './ModalBody';
 import { faShoppingBasket, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
-import styles from './Header.module.scss';
-import ModalBody from './ModalBody';
 
 const cx = classNames.bind(styles);
 
@@ -18,6 +19,7 @@ const listTab = [
 
 function Header({ className }) {
     const [show, setShow] = useState(false);
+    const user = useSelector((state) => state.user.login?.currentUser);
     const handleClick = () => {
         setShow(true);
     };
@@ -28,6 +30,7 @@ function Header({ className }) {
     const classes = cx('wrapper', {
         [className]: className,
     });
+    console.log(user);
     return (
         <div className={classes}>
             <div className={cx('inner')}>
@@ -47,9 +50,19 @@ function Header({ className }) {
                     <img src="https://dominos.vn/img/icon/flag-vn.png" alt="flag-vn" />
                     <img src="https://dominos.vn/img/icon/flag-en.png" alt="flag-en" />
 
-                    <button className={cx('icon')} onClick={handleClick}>
-                        <FontAwesomeIcon icon={faUser} />
-                    </button>
+                    {!user ? (
+                        <button className={cx('icon')} onClick={handleClick}>
+                            <FontAwesomeIcon icon={faUser} />
+                        </button>
+                    ) : (
+                        <div className={cx('icon-login')}>
+                            <FontAwesomeIcon icon={faUser} />
+                            <div className={cx('user-login')}>
+                                <p>{user.username}</p>
+                                <button>Đăng Xuất</button>
+                            </div>
+                        </div>
+                    )}
 
                     <Link to="/cart" className={cx('icon-shop')}>
                         <FontAwesomeIcon icon={faShoppingBasket} />

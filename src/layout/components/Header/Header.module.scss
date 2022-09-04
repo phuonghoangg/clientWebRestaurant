@@ -81,6 +81,38 @@
 .icon {
     @include icon-right();
 }
+.icon-login {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 3.4rem;
+    color: #fff;
+    .user-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        padding-left: 5px;
+        color: black;
+        font-weight: 600;
+        p {
+            margin: 0;
+            cursor: pointer;
+            &:hover {
+                text-decoration: dashed;
+            }
+        }
+        button {
+            background-color: transparent;
+            font-weight: 600;
+        }
+    }
+}
 .icon-shop {
     @include icon-right();
     position: relative;
